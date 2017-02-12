@@ -1,10 +1,13 @@
 class BoardsController < ApplicationController
   before_action :set_board, only: [:show, :edit, :update, :destroy]
 
+  before_action :authenticate_model!
+
   # GET /boards
   # GET /boards.json
   def index
     @boards = Board.all
+    
   end
 
   # GET /boards/1
@@ -15,10 +18,12 @@ class BoardsController < ApplicationController
   # GET /boards/new
   def new
     @board = Board.new
+   
   end
 
   # GET /boards/1/edit
   def edit
+    
   end
 
   # POST /boards

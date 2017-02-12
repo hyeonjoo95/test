@@ -2,8 +2,8 @@
 
 one:
   description: MyText
-  references: 
+  user: one
 
 two:
   description: MyText
-  references: 
+  user: two
